@@ -14,7 +14,7 @@ enum ToastType {
   all,
 }
 
-class ToastStyle extends Diagnosticable {
+class ToastStyle with Diagnosticable {
   const ToastStyle({
     this.alignment,
     this.disappearTime,
@@ -201,7 +201,7 @@ class IDKitToast {
 }
 
 /// Separate text toast type
-class SeparateTextStyle extends Diagnosticable {
+class SeparateTextStyle with Diagnosticable {
   const SeparateTextStyle({
     this.padding,
     this.maxWidthScale,
@@ -258,7 +258,7 @@ Widget buildSeparateText(
 }
 
 /// Chrysanthemum style
-class ChrysanthemumStyle extends Diagnosticable {
+class ChrysanthemumStyle with Diagnosticable {
   const ChrysanthemumStyle({
     this.color,
     this.activityColor,

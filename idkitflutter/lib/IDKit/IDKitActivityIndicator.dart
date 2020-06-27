@@ -195,7 +195,7 @@ class _IDKitActivityIndicatorPaint extends CustomPainter {
 }
 
 /// Style of active indicator
-class ActivityIndicatorStyle extends Diagnosticable {
+class ActivityIndicatorStyle with Diagnosticable {
   const ActivityIndicatorStyle({
     this.color,
     this.activityColor,

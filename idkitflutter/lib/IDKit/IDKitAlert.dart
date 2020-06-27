@@ -10,7 +10,7 @@ enum AlertType {
 }
 
 /// Alert style class
-class AlertStyle extends Diagnosticable {
+class AlertStyle with Diagnosticable {
   const AlertStyle({
     this.bgColor,
     this.radius,

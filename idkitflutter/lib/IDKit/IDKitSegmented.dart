@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 /// Style of IDKitSegmented
-class SegmentedStyle extends Diagnosticable {
+class SegmentedStyle with Diagnosticable {
   const SegmentedStyle({
     this.unSelectedBgColor,
     this.selectedBgColor,
@@ -274,7 +274,7 @@ class SplitLine extends StatelessWidget {
 }
 
 /// Splity Style
-class SplitLineStyle extends Diagnosticable {
+class SplitLineStyle with Diagnosticable {
   const SplitLineStyle({
     this.width,
     this.height,
