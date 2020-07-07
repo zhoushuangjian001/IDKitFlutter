@@ -49,7 +49,7 @@ class IDKitCountDownButton extends StatefulWidget {
   final Function(Function(String), int time) countDownTitle;
 
   /// method block
-  final Function(Function(bool) callBlock) methodBlock;
+  final Function(Function(bool) callBlock, bool isState) methodBlock;
 
   /// style
   final CountDownButtonStyle style;
@@ -146,9 +146,12 @@ class _IDKitCountDownButton extends State<IDKitCountDownButton> {
               _timer = Timer.periodic(
                 Duration(seconds: 1),
                 (timer) {
+                  print(curTime);
                   if (curTime < 1) {
                     isDoing = false;
                     curctTile = widget.title;
+                    curTime = widget.totalTime;
+                    timer.cancel();
                   } else {
                     curTime -= 1;
                   }
@@ -159,6 +162,7 @@ class _IDKitCountDownButton extends State<IDKitCountDownButton> {
               );
             }
           },
+          isDoing,
         );
       },
     );
