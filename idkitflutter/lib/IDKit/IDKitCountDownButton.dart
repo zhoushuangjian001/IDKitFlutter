@@ -146,7 +146,6 @@ class _IDKitCountDownButton extends State<IDKitCountDownButton> {
               _timer = Timer.periodic(
                 Duration(seconds: 1),
                 (timer) {
-                  print(curTime);
                   if (curTime < 1) {
                     isDoing = false;
                     curctTile = widget.title;
@@ -171,6 +170,5 @@ class _IDKitCountDownButton extends State<IDKitCountDownButton> {
   @override
   void dispose() {
     super.dispose();
-    _timer.cancel();
   }
 }
