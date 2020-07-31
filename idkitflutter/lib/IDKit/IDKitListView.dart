@@ -93,7 +93,6 @@ class _IDKitListView extends State<IDKitListView> {
       padding: widget.padding ?? EdgeInsets.all(0),
       color: _style.bgColor,
       child: CustomScrollView(
-        physics: BouncingScrollPhysics(),
         controller: widget.controller,
         slivers: <Widget>[
           SliverToBoxAdapter(
